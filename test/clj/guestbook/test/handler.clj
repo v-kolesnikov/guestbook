@@ -1,7 +1,14 @@
 (ns guestbook.test.handler
   (:require [clojure.test :refer :all]
-            [ring.mock.request :refer :all]
-            [guestbook.handler :refer :all]))
+            [guestbook.db.migrations :as migrations]
+            [guestbook.handler :refer :all]
+            [ring.mock.request :refer :all]))
+
+(use-fixtures
+  :once
+  (fn [f]
+    (migrations/migrate ["migrate"])
+    (f)))
 
 (deftest test-app
   (testing "main route"
