@@ -1,7 +1,7 @@
 (ns guestbook.db.core
   (:require
-    [yesql.core :refer [defqueries]]
-    [config.core :refer [env]]))
+   [yesql.core :refer [defqueries]]
+   [config.core :refer [env]]))
 
 (def conn
   {:classname   "org.h2.Driver"

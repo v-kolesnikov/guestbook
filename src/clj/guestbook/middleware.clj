@@ -38,16 +38,16 @@
 
 (defn wrap-csrf [handler]
   (wrap-anti-forgery
-    handler
-    {:error-response
-     (error-page
-       {:status 403
-        :title "Invalid anti-forgery token"})}))
+   handler
+   {:error-response
+    (error-page
+     {:status 403
+      :title "Invalid anti-forgery token"})}))
 
 (defn wrap-formats [handler]
   (let [wrapped (wrap-restful-format
-                  handler
-                  {:formats [:json-kw :transit-json :transit-msgpack]})]
+                 handler
+                 {:formats [:json-kw :transit-json :transit-msgpack]})]
     (fn [request]
       ;; disable wrap-formats for websockets
       ;; since they're not compatible with this middleware
@@ -60,8 +60,8 @@
       wrap-flash
       (wrap-session {:cookie-attrs {:http-only true}})
       (wrap-defaults
-        (-> site-defaults
-            (assoc-in [:security :anti-forgery] false)
-            (dissoc :session)))
+       (-> site-defaults
+           (assoc-in [:security :anti-forgery] false)
+           (dissoc :session)))
       wrap-context
       wrap-internal-error))

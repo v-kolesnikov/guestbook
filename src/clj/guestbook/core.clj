@@ -40,4 +40,4 @@
     (do (migrations/migrate args) (System/exit 0))
     :else
     (start-app args)))
-  
+

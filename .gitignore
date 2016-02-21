@@ -1,12 +1,12 @@
-/target
-/lib
-/classes
-/checkouts
-pom.xml
-*.jar
-*.class
-/.lein-*
-profiles.clj
 /.env
- .nrepl-port 
+/.lein-*
+/checkouts
+/classes
+/lib
 /log
+/target
+*.class
+*.jar
+.nrepl-port
+pom.xml
+profiles.clj

@@ -54,8 +54,8 @@
                                  [ring/ring-devel "1.4.0"]
                                  [pjstadig/humane-test-output "0.7.1"]
                                  [mvxcvi/puget "1.0.0"]]
-                  
-                  
+
+
                   :source-paths ["env/dev/clj" "test/clj"]
                   :resource-paths ["env/dev/resources"]
                   :repl-options {:init-ns user}

@@ -16,11 +16,11 @@
   (jdbc/with-db-transaction [t-conn db/conn]
     (jdbc/db-set-rollback-only! t-conn)
     (is (= 1 (db/create-user!
-               {:id         "1"
-                :first_name "Sam"
-                :last_name  "Smith"
-                :email      "sam.smith@example.com"
-                :pass       "pass"} {:connection t-conn})))
+              {:id         "1"
+               :first_name "Sam"
+               :last_name  "Smith"
+               :email      "sam.smith@example.com"
+               :pass       "pass"} {:connection t-conn})))
     (is (= [{:id         "1"
              :first_name "Sam"
              :last_name  "Smith"
