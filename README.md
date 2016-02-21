@@ -1,8 +1,8 @@
-# guestbook
+[![Build Status](https://travis-ci.org/justCxx/guestbook.svg?branch=master)](https://travis-ci.org/justCxx/guestbook)
 
-generated using Luminus version 2.9.x
+# Guestbook
 
-FIXME
+Generated using Luminus version 2.9.x
 
 ## Prerequisites
 
